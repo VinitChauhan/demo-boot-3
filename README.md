@@ -1,3 +1,6 @@
 # demo-boot-3
 
-Springbot 3 with HTTP Interface demo
+Spring-boot 3
+HTTP Interface
+Basic auth security
+Records
