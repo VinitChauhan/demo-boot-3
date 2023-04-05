@@ -9,15 +9,18 @@ import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 
 @SpringBootApplication
 public class DemoBoot3Application {
-	public static void main(String[] args) {
-		SpringApplication.run(DemoBoot3Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DemoBoot3Application.class, args);
+    }
 
-	@Bean
-	public HttpServiceProxyFactory httpFactory(){
-		WebClient client = WebClient.builder().baseUrl("http://localhost:8081").build();
-		HttpServiceProxyFactory httpServiceProxyFactory = HttpServiceProxyFactory.builder(WebClientAdapter.forClient(client)).build();
-		return httpServiceProxyFactory;
-	}
-
+    @Bean
+    public HttpServiceProxyFactory httpFactory() {
+        WebClient client = WebClient
+                .builder()
+                .baseUrl("http://localhost:8081")
+                .build();
+        return HttpServiceProxyFactory
+                .builder(WebClientAdapter.forClient(client))
+                .build();
+    }
 }

@@ -31,7 +31,7 @@ public class DemoBoot3Controller {
         return demoBoot3Service.updateLocation(location);
     }
     @DeleteMapping("/delete/{id}")
-    public List<Location> updateLocation(@PathVariable Integer id) {
+    public List<Location> updateLocation(@PathVariable("id") Integer id) {
         return demoBoot3Service.deleteLocation(id);
     }
 
