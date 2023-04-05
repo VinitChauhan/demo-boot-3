@@ -23,5 +23,5 @@ public interface DemoBoot3Service {
     List<Location> updateLocation(@RequestBody Location location);
 
     @DeleteExchange("/demo/delete/{id}")
-    List<Location> deleteLocation(@PathVariable Integer id);
+    List<Location> deleteLocation(@PathVariable("id") Integer id);
 }
